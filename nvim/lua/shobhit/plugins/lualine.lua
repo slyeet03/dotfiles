@@ -14,6 +14,7 @@ return {
 
 		-- configure lualine with modified theme
 		lualine.setup({
+			globalstatus = false,
 			sections = {
 				lualine_a = nvimbattery,
 				lualine_x = {

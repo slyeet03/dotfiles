@@ -45,13 +45,32 @@ return {
 	-- 		vim.cmd("colorscheme carbonfox")
 	-- 	end,
 	-- },
+	--	{
+	--		"polirritmico/monokai-nightasty.nvim",
+	--		lazy = false,
+	--		priority = 1000,
+	--		config = function()
+	--			vim.opt.background = "dark" -- default to dark or light style
+	--			vim.cmd.colorscheme("monokai-nightasty")
+	--		end,
+	--	},
 	{
-		"polirritmico/monokai-nightasty.nvim",
-		lazy = false,
+		"catppuccin/nvim",
+		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			vim.opt.background = "dark" -- default to dark or light style
-			vim.cmd.colorscheme("monokai-nightasty")
+			require("catppuccin").setup({
+				flavour = "mocha",
+				transparent_background = false,
+        color_overrides = {
+          mocha = {
+            base = "#201c2c",
+            mantle = "#201c2c",
+            crust = "#201c2c",
+          }
+        }
+			})
+			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
 }
