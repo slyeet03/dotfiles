@@ -4,8 +4,15 @@ return {
 	version = "*",
 	opts = {
 		options = {
-			mode = "tabs",
-			separator_style = "thick",
+			mode = "buffers",
+			themable = true,
+			separator_style = "slant",
+			buffer_close_icon = "󰅖",
+			modified_icon = "● ",
+			close_icon = " ",
+			left_trunc_marker = " ",
+			right_trunc_marker = " ",
+
 			hover = {
 				enabled = true,
 				delay = 200,
