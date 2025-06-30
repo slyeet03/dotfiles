@@ -13,8 +13,8 @@ keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- incremen
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- window management
-keymap.set("n", "<leader>sv", ": vsplit | edit ", { desc = "Split window vertically" }) -- split window vertically
-keymap.set("n", "<leader>sh", ": split | edit ", { desc = "Split window horizontally" }) -- split window horizontally
+keymap.set("n", "<leader>sv", ": vsplit | edit<CR>", { desc = "Split window vertically" }) -- split window vertically
+keymap.set("n", "<leader>sh", ": split | edit<CR>", { desc = "Split window horizontally" }) -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>sq", "<C-w>w", { desc = "Jump between split windows" }) -- jump between split windows
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
@@ -30,7 +30,7 @@ keymap.set("n", "<leader>!f", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set(
 	"n",
 	"<leader>th",
-	":ToggleTerm size=7  direction=horizontal<CR>",
+	":ToggleTerm size=10  direction=horizontal<CR>",
 	{ desc = "Open terminal in horizontal split window" }
 )
 keymap.set("n", "<leader>ts", ":TermSelect<CR>", { desc = "Select which terminal to open" })
