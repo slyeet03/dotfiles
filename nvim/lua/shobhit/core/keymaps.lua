@@ -50,3 +50,6 @@ keymap.set("n", "<leader>sc", ":w<CR>", { desc = "Save current file" })
 
 -- find and replace
 keymap.set("n", "<leader>fi", ":%s/", { desc = "Substitute" })
+
+-- macros(kinda)
+keymap.set("i", "sopln", "System.out.println", { desc = "Make java easier" })

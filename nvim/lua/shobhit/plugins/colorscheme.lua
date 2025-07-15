@@ -54,23 +54,33 @@ return {
 	--			vim.cmd.colorscheme("monokai-nightasty")
 	--		end,
 	--	},
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("catppuccin").setup({
+	-- 			flavour = "mocha",
+	-- 			transparent_background = false,
+	--        color_overrides = {
+	--          mocha = {
+	--            base = "#201c2c",
+	--            mantle = "#201c2c",
+	--            crust = "#201c2c",
+	--          }
+	--        }
+	-- 		})
+	-- 		vim.cmd.colorscheme("catppuccin")
+	-- 	end,
+	-- },
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"sainnhe/gruvbox-material",
+		lazy = false,
 		priority = 1000,
 		config = function()
-			require("catppuccin").setup({
-				flavour = "mocha",
-				transparent_background = false,
-        color_overrides = {
-          mocha = {
-            base = "#201c2c",
-            mantle = "#201c2c",
-            crust = "#201c2c",
-          }
-        }
-			})
-			vim.cmd.colorscheme("catppuccin")
+			vim.g.gruvbox_material_background = "hard"
+			vim.g.gruvbox_material_enable_italic = true
+			vim.cmd.colorscheme("gruvbox-material")
 		end,
 	},
 }
