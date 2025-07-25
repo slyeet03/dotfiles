@@ -22,8 +22,6 @@ keymap.set("n", "<leader><Tab>", ": Chowcho<CR>", { desc = "Choose what window t
 
 keymap.set("n", "<leader>n", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 keymap.set("n", "<leader>x", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-keymap.set("n", "<leader><Right>", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-keymap.set("n", "<leader><Left>", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>!f", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- terminal
@@ -53,3 +51,15 @@ keymap.set("n", "<leader>fi", ":%s/", { desc = "Substitute" })
 
 -- macros(kinda)
 keymap.set("i", "sopln", "System.out.println", { desc = "Make java easier" })
+
+-- Bufferline
+keymap.set("n", "<leader>bs", ":BufferLinePick<CR>")
+keymap.set("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>")
+keymap.set("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>")
+keymap.set("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>")
+keymap.set("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>")
+keymap.set("n", "<leader>5", ":BufferLineGoToBuffer 5<CR>")
+keymap.set("n", "<leader>6", ":BufferLineGoToBuffer 6<CR>")
+keymap.set("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>")
+keymap.set("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>")
+keymap.set("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>")

@@ -32,8 +32,6 @@ return {
 				return cached_music -- Use cached result if <5 seconds since last update
 			end
 
-			local apple_music_cmd =
-				[[osascript -e 'tell application "Music" to if player state is playing then artist of current track & " - " & name of current track' 2>/dev/null]]
 			local spotify_cmd =
 				[[osascript -e 'tell application "Spotify" to if player state is playing then artist of current track & " - " & name of current track' 2>/dev/null]]
 

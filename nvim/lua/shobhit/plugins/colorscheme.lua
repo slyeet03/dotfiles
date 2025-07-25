@@ -39,12 +39,17 @@ return {
 	-- 		vim.cmd("colorscheme oxocarbon")
 	-- 	end,
 	-- },
-	-- {
-	-- 	"EdenEast/nightfox.nvim",
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme carbonfox")
-	-- 	end,
-	-- },
+	--[[ {
+		"EdenEast/nightfox.nvim",
+		config = function()
+			require("nightfox").setup({
+				options = {
+					transparent = true,
+				},
+			})
+			vim.cmd("colorscheme carbonfox")
+		end,
+	}, ]]
 	--	{
 	--		"polirritmico/monokai-nightasty.nvim",
 	--		lazy = false,
