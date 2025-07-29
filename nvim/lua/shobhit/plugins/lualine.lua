@@ -35,15 +35,9 @@ return {
 			local spotify_cmd =
 				[[osascript -e 'tell application "Spotify" to if player state is playing then artist of current track & " - " & name of current track' 2>/dev/null]]
 
-			local handle = io.popen(apple_music_cmd)
+			local handle = io.popen(spotify_cmd)
 			local result = handle:read("*a")
 			handle:close()
-
-			if result == "" then
-				handle = io.popen(spotify_cmd)
-				result = handle:read("*a")
-				handle:close()
-			end
 
 			result = result:gsub("\n", "") -- Remove newlines
 			cached_music = result ~= "" and "󰎆 " .. result or "" -- Cache result

@@ -92,12 +92,16 @@ scroll() {
 
   FLOAT="$(osascript -e 'tell application "Spotify" to get player position')"
   TIME=${FLOAT%.*}
-  
+
+  icon=$(printf "%02d:%02d" $((TIME/60)) $((TIME%60)))
+  label=$(printf "%02d:%02d" $((DURATION/60)) $((DURATION%60)))
+
   sketchybar --animate linear 10 \
              --set spotify.state slider.percentage="$((TIME*100/DURATION))" \
-                                 icon="$(date -r $TIME +'%M:%S')" \
-                                 label="$(date -r $DURATION +'%M:%S')"
+                                 icon="$icon" \
+                                 label="$label"
 }
+
 
 mouse_clicked () {
   case "$NAME" in
