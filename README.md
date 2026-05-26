@@ -9,10 +9,14 @@
 </p>
 
 <p align="center">
+  <img src="./assets/nvim.png" width="900">
+</p>
+
+<p align="center">
   <img src="./assets/bar.png" width="900">
 </p>
 
-# ⚙️ Setup
+# Setup
 
 ## Machine
 
@@ -20,7 +24,7 @@
 - **OS:** macOS
 - **Shell:** zsh
 
-# 🧩 Included Configurations
+# Included Configurations
 
 | Tool         | Description              |
 | ------------ | ------------------------ |
