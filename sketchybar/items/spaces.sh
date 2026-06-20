@@ -1,61 +1,46 @@
-#!/bin/bash
+#!/usr/bin/env bash
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15")
-
-# Destroy space on right click, focus space on left click.
-# New space by left clicking separator (>)
-
-sid=0
-spaces=()
-for i in "${!SPACE_ICONS[@]}"
-do
-  sid=$(($i+1))
-
-  space=(
-    associated_space=$sid
-    icon="${SPACE_ICONS[i]}"
-    icon.padding_left=10
-    icon.padding_right=10
-    padding_left=2
-    padding_right=2
-    label.padding_right=20
-    icon.color=$WHITE
-    icon.highlight_color=$RED
-    label.color=$GREY
-    label.highlight_color=$WHITE
-    label.font="sketchybar-app-font:Regular:16.0"
-    label.y_offset=-1
-    background.color=$BACKGROUND_1
-    background.border_color=$BACKGROUND_2
-    background.drawing=off
-    label.drawing=off
-    script="$PLUGIN_DIR/space.sh"
-  )
-
-  sketchybar --add space space.$sid left    \
-             --set space.$sid "${space[@]}" \
-             --subscribe space.$sid mouse.clicked
+for ws in 1 2 3 4 5; do
+  sketchybar --add item "space.$ws" left \
+    --set "space.$ws" \
+      display=1 \
+      drawing=on \
+      icon="$ws" \
+      icon.highlight_color=$BLUE \
+      label="" \
+      label.drawing=on \
+      label.highlight_color=$BLUE \
+      label.font="SF Pro:Semibold:11.0" \
+      background.border_color=$BACKGROUND_2 \
+      background.height=26 \
+      background.corner_radius=9 \
+      background.border_width=2 \
+      padding_left=$PADDINGS \
+      padding_right=$PADDINGS \
+      script="$PLUGIN_DIR/space.sh" \
+      click_script="aerospace workspace ${ws}" \
+    --subscribe "space.$ws" aerospace_workspace_change mouse.clicked front_app_switched system_woke
 done
 
-spaces_bracket=(
-  background.color=$BACKGROUND_1
-  background.border_color=$BACKGROUND_2
-  background.border_width=2
-)
-
-separator=(
-  icon=􀆊
-  icon.font="$FONT:Heavy:16.0"
-  padding_left=10
-  padding_right=8
-  label.drawing=off
-  associated_display=active
-  click_script='yabai -m space --create && sketchybar --trigger space_change'
-  icon.color=$WHITE
-)
-
-sketchybar --add bracket spaces_bracket '/space\..*/'  \
-           --set spaces_bracket "${spaces_bracket[@]}" \
-                                                       \
-           --add item separator left                   \
-           --set separator "${separator[@]}"
+for ws in 6 7 8 9; do
+  sketchybar --add item "space.$ws" left \
+    --set "space.$ws" \
+      display=2 \
+      drawing=on \
+      icon="$ws" \
+      icon.highlight_color=$BLUE \
+      label="" \
+      label.drawing=on \
+      label.highlight_color=$BLUE \
+      label.font="SF Pro:Semibold:11.0" \
+      background.border_color=$BACKGROUND_2 \
+      background.height=26 \
+      background.corner_radius=9 \
+      background.border_width=2 \
+      padding_left=$PADDINGS \
+      padding_right=$PADDINGS \
+      script="$PLUGIN_DIR/space.sh" \
+      click_script="aerospace workspace ${ws}" \
+    --subscribe "space.$ws" aerospace_workspace_change mouse.clicked front_app_switched system_woke
+done
