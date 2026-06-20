@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/bar.png" width="900">
+  <img src="./assets/bar1.png" width="900">
 </p>
 
 # Setup
@@ -28,7 +28,7 @@
 
 | Tool         | Description              |
 | ------------ | ------------------------ |
-| `yabai`      | Tiling window manager    |
+| `aerospace`  | Tiling window manager    |
 | `skhd`       | Hotkey daemon            |
 | `sketchybar` | Custom status bar        |
 | `wezterm`    | GPU accelerated terminal |
