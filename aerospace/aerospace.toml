@@ -41,8 +41,13 @@ inner.horizontal = 5
 inner.vertical   = 5
 outer.left       = 5
 outer.bottom     = 5
-outer.top        = 43  
 outer.right      = 5
+
+outer.top = [
+  { monitor."Built-in Retina Display" = 11 },
+  { monitor."L22e-40" = 43 },
+  43
+]
 
 # ─────────────────────────────────────────────
 #  Main mode
